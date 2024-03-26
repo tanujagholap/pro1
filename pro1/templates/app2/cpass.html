@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>CPASS</title>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <label>OLD PASSWORD:</label>
+        <input name="old">
+        <br>
+
+        <label>NEW PASSWORD:</label>
+        <input name="new">
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}
+
